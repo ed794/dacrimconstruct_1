@@ -1,0 +1,307 @@
+body {
+    background-image:url("/images/vecteezy_silhouette-of-engineer-looking-at-construction-site_22453397.jpg");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background: #333;
+    padding: 1.8%;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    margin: 3%;
+    text-decoration: none;
+    font-size: 150%;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f4a261;
+}
+
+.container {
+    padding: 40px;
+    text-align: center;
+    background: white;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.button {
+    display: inline-block;
+    padding: 16px 28px;
+    background: rgb(38, 80, 169);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 24px;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: rgb(183, 235, 245);
+    color: black;
+    cursor: pointer;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    .navbar a {
+        font-size: 16px;
+    }
+    .container {
+        width: 90%;
+    }
+    .button {
+        padding: 15px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar a {
+        margin: 10px 10px;
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .button {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .button {
+        padding: 8px 16px;
+    }
+}
+
+.introducere {
+    font-size: 350%;
+    font-weight: bold;
+}
+
+.introducere_1 {
+    font-size: 150%;
+}
+
+#contact {
+    padding: 40px;
+    width: 69%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#contact h2 {
+    color: #333;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#contact input, #contact textarea {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact input[type="submit"] {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#contact input[type="submit"]:hover {
+    background: darkblue;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 100px;
+}
+.nigga{
+    font-size: 30px;
+    text-align: left;
+    
+}
+ /* Default light mode */
+ .container {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+  }
+  
+  /* Dark mode toggle styles */
+  .container.dark-mode {
+    background-color: #2b2a2a;
+    color: white;
+  }
+  
+  #darkModeToggle {
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  #darkModeToggle:hover {
+    background: #555;
+  }
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 750px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .slides {
+    display: fill;
+    transition: transform 0.3s ease;
+  }
+  
+  .slides img {
+    width: 750px;
+    height: 450px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .arrow.left {
+    left: 0;
+  }
+  
+  .arrow.right {
+    right: 0;
+  }
+  
+  .thumbnails-container {
+    display: flex;
+    gap: 5px;
+    margin: 10px auto;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .thumbnails-container img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.5;
+    border: 2px solid transparent;
+    transition: 0.3s;
+  }
+  
+  .thumbnails-container img.active {
+    opacity: 1;
+    border-color: #000;
+  }
+  
+  .thumbnails-container span {
+    font-size: 24px;
+    color: gray;
+    margin-left: 10px;
+  }
+
+  #scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  background-color: #0b0b0b;
+  color: white;
+  border: none;
+  padding: 15px 18px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  animation: floatRocket 2s ease-in-out infinite;
+}
+
+#scrollToTopBtn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Hover effect */
+#scrollToTopBtn:hover {
+  background-color: #222;
+  transform: scale(1.2) rotate(-10deg);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+}
+
+/* Floating animation */
+@keyframes floatRocket {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}

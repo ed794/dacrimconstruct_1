@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma de Construcții</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "Rs6z7wm1r8Obq0Dtu",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_v0x0rnr', 'template_mo8kr65', this)
+                    .then(() => {
+                        (alert("message sent!!"));
+                    }, (error) => {
+                        (alert("failled to send!!"));
+                    });
+            });
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="navbar">
+        <a href="home.html">Acasă</a>
+        <a href="about.html">Despre Noi</a>
+        <a href="services.html">Servicii</a>
+        <a href="projects.html">Proiecte</a>
+        <a href="contact.html">Contact</a>
+        <a id="darkModeToggle">🌙 Dark Mode</a>
+    </div>
+    <div id="contact" class="container">
+        <p class="introducere">Contact</p>
+        <p>Ne puteți contacta la:</p>
+        <p><b>Email: DacrimConstruct@gmail.com</b></p>
+        <p><b>Telefon: +40 748 035 651</b></p>
+        <form id="form">
+            <input type="hidden" name="time" value="Mar 10 2025 08:46">
+            <label>Name</label>
+            <input type="text" name="name" required>
+            <label>Email</label>
+            <input type="email" name="email" required>
+            <label>Subiect</label>
+            <input type="text" name="title" required>
+            <label>Message</label>
+            <textarea name="message" required></textarea>
+            <input type="submit" value="Send">
+        </form>
+        <script>
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const container = document.querySelector('.container');
+            
+            // Function to apply theme based on localStorage
+            function applyTheme() {
+              const isDarkMode = localStorage.getItem('darkMode') === 'true';
+              container.classList.toggle('dark-mode', isDarkMode);
+              darkModeToggle.textContent = isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode';
+            }
+            
+            // Toggle dark mode and save to localStorage
+            darkModeToggle.addEventListener('click', () => {
+              const isDark = container.classList.toggle('dark-mode');
+              localStorage.setItem('darkMode', isDark);
+              darkModeToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+            });
+            
+            // Apply theme on page load
+            applyTheme();
+            </script>
+    </div>
+</body>
+</html>

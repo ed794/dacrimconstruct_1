@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma de Construcții</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="home.html">Acasă</a>
+        <a href="about.html">Despre Noi</a>
+        <a href="services.html">Servicii</a>
+        <a href="projects.html">Proiecte</a>
+        <a href="contact.html">Contact <img href="images/contact.png" ; id="imagine_Container" ></a>
+        <a id="darkModeToggle">🌙 Dark Mode</a>
+    </div>
+    <div id="home" class="container">
+        <p class="introducere">Bine ați venit la Dacrim Construct SRL</p>
+        <p class="introducere_1">Construim vise, realizăm proiecte durabile!</p>
+        <a href="contact.html" class="button">Contactați-ne</a>
+    </div>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const container = document.querySelector('.container');
+        
+        // Function to apply theme based on localStorage
+        function applyTheme() {
+          const isDarkMode = localStorage.getItem('darkMode') === 'true';
+          container.classList.toggle('dark-mode', isDarkMode);
+          darkModeToggle.textContent = isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode';
+        }
+        
+        // Toggle dark mode and save to localStorage
+        darkModeToggle.addEventListener('click', () => {
+          const isDark = container.classList.toggle('dark-mode');
+          localStorage.setItem('darkMode', isDark);
+          darkModeToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+        });
+        
+        // Apply theme on page load
+        applyTheme();
+        </script>
+</body>
+</html>
